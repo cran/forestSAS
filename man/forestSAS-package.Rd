@@ -18,6 +18,7 @@ Zongzheng Chai, chaizz@126.com
 None
 }
 \examples{
+library(spatstat)
 data(tree.ppp)
 ##Get the tree attributies of nearest neighbour
 nnindices<-nnIndex(tree.ppp,N=4,

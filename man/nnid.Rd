@@ -36,6 +36,7 @@ Zongzheng Chai, chaizz@126.com
 }
 \examples{
 library(spatstat)
+library(spatstat.data)
 data(finpines)
 #Find the id of the nearest neighbour in a certain numbers and without id
 finpines.rmidN4<-nnid(finpines,id=paste("T",1:finpines$n),N=4)

@@ -7,7 +7,7 @@ Expand the edges for the point pattern with replication.
 When computing forest spatial structure indices, The trees near the edges of the study region are distorted because the outside is empty. Common solutions to this problem are not to use indices computed for trees near the edges, or (with rectangular regions) to attach translated copies, thus changing the topology into a torus.
 }
 \usage{
-expandedge(X, xwidth, ywidth, id = 1:X$n)
+expandedge(X, xwidth, ywidth,id = 1:X$n, marks=X$marks,type="com")
 }
 \arguments{
   \item{X}{
@@ -21,6 +21,12 @@ Distance from the edges y coordinates,note xwidth is the half of your width want
 }
   \item{id}{
 Specific identification number of the points in the point pattern.
+}
+  \item{marks}{
+Marks of nearest neighbour in the point pattern.
+}
+  \item{type}{
+Data format,com is data.frame and ppp is the ppp format in the spapstat package.
 }
 }
 \details{
@@ -36,6 +42,7 @@ Zongzheng Chai, chaizz@126.com
 }
 \examples{
 library(spatstat)
+library(spatstat.data)
 data(finpines)
 finpines$window
 # window: rectangle = [-5, 5] x [-8, 2] metres
